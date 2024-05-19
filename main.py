@@ -54,8 +54,8 @@ def main():
     st.set_page_config(page_title="PetCareMate")
 
     # Load and display the logo image
-    logo_image = Image.open(r"C:\Users\MANOJ KUMAR R\Downloads\mining_llm1-main\Ai pet care mate\imageedit_1_5862279130.png")
-    st.sidebar.image(logo_image, use_column_width=True)
+    #logo_image = Image.open(r"C:\Users\MANOJ KUMAR R\Downloads\mining_llm1-main\Ai pet care mate\imageedit_1_5862279130.png")
+    #st.sidebar.image(logo_image, use_column_width=True)
 
     st.header('Welcome to :violet[PetCareMate]')
     st.write(
