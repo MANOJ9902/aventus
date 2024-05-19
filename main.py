@@ -10,6 +10,8 @@ from langchain.prompts import (
     ChatPromptTemplate,
     MessagesPlaceholder
 )
+import webbrowser
+
 from streamlit_option_menu import option_menu
 from streamlit_chat import message
 from utils import *
@@ -52,8 +54,8 @@ def main():
     st.set_page_config(page_title="PetCareMate")
 
     # Load and display the logo image
-    #logo_image = Image.open(r" https://github.com/MANOJ9902/aventus/blob/main/imageedit_1_5862279130.png ")
-    #st.sidebar.image(logo_image, use_column_width=True)
+    logo_image = Image.open(r"C:\Users\MANOJ KUMAR R\Downloads\mining_llm1-main\Ai pet care mate\imageedit_1_5862279130.png")
+    st.sidebar.image(logo_image, use_column_width=True)
 
     st.header('Welcome to :violet[PetCareMate]')
     st.write(
@@ -455,8 +457,8 @@ def main():
         with st.sidebar:
             app = option_menu(
                 menu_title='PetCareMate',
-                options=['Home', 'About us', 'Contact us', '📊Stats', 'Detect disease'],  # Use 'Health Management' here
-                icons=['house-fill', 'person', 'phone', '', 'person-circle', 'heart'],
+                options=['Home', 'About us', 'Contact us', '📊Stats', 'Detect disease', 'Diet Planner'],  # Use 'Health Management' here
+                icons=['house-fill', 'person', 'phone', '', 'person-circle', 'heart', ''],
                 menu_icon='chat-text-fill',
                 default_index=1,
                 styles={
@@ -471,6 +473,9 @@ def main():
         for item in multi_app.apps:
             if app == item["title"]:
                 item["function"]()
+
+        if app == 'Diet Planner':
+            webbrowser.open("https://dietplanner.streamlit.app/")
 
     run()
 
