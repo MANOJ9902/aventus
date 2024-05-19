@@ -52,8 +52,8 @@ def main():
     st.set_page_config(page_title="PetCareMate")
 
     # Load and display the logo image
-    logo_image = Image.open(r" https://github.com/MANOJ9902/aventus/blob/main/imageedit_1_5862279130.png ")
-    st.sidebar.image(logo_image, use_column_width=True)
+    #logo_image = Image.open(r" https://github.com/MANOJ9902/aventus/blob/main/imageedit_1_5862279130.png ")
+    #st.sidebar.image(logo_image, use_column_width=True)
 
     st.header('Welcome to :violet[PetCareMate]')
     st.write(
